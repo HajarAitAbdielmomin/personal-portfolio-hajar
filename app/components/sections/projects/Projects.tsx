@@ -72,12 +72,16 @@ function ProjectGallery({ project }: { project: Project }) {
     );
 }
 
+const DESCRIPTION_LIMIT = 150;
+
 export default function ProjectsSlider() {
     const [current, setCurrent] = useState(0);
+    const [expanded, setExpanded] = useState(false);
 
     const goTo = (index: number) => {
         const total = projects.length;
         setCurrent(((index % total) + total) % total);
+        setExpanded(false);
     };
 
     return (
@@ -140,7 +144,20 @@ export default function ProjectsSlider() {
                   </span>
                                 )}
                                 <h3 className="text-2xl font-bold text-gray-900 mb-3">{projects[current].title}</h3>
-                                <p className="text-sm text-gray-500 leading-relaxed mb-5">{projects[current].description}</p>
+                                <p className="text-sm text-gray-500 leading-relaxed mb-1">
+                                    {expanded || projects[current].description.length <= DESCRIPTION_LIMIT
+                                        ? projects[current].description
+                                        : projects[current].description.slice(0, DESCRIPTION_LIMIT) + '... '}
+                                    {projects[current].description.length > DESCRIPTION_LIMIT && (
+                                        <button
+                                            onClick={() => setExpanded(v => !v)}
+                                            className="text-xs text-blue-600 hover:underline mb-4"
+                                        >
+                                            {expanded ? 'Show less' : 'Read more'}
+                                        </button>
+                                    )}
+                                </p>
+
 
                                 <div className="flex flex-wrap gap-2 mb-6">
                                     {projects[current].tags.map((tag, i) => (
