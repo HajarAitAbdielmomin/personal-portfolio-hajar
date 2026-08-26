@@ -14,9 +14,9 @@ import { TbBrandOpenai, TbApi, TbBrandAws } from 'react-icons/tb';
 
  export const projects = [
         {
-            title: 'E-Commerce Microservices Platform',
-            description: 'A scalable e-commerce backend built with Spring Boot microservices, event-driven communication, and full Docker/AWS deployment pipeline.',
-            tags: ['Spring Boot', 'Microservices', 'Docker', 'AWS', 'MySQL'],
+            title: 'AI Technical Interview Simulator For Software Engineers - IntervAI',
+            description: 'IntervAI is an AI-powered technical interview simulator built with Spring Boot, Spring AI, and Angular. It lets developers practice interviews tailored to a specific role, tech stack, and difficulty level, with three distinct AI interviewer personas, a strict FAANG-style interviewer, a startup CTO, and a junior-friendly mentor. Each session generates adaptive questions in real time, preserves full conversation history across 8 rounds, and ends with a structured AI evaluation covering score, strengths, weaknesses, and improvement suggestions. Sessions are time-bound, resumable after disconnection, and all results are stored for progress tracking. The backend is secured with Spring Security + JWT, connected to a managed MySQL database, and the full stack is deployed on DigitalOcean App Platform.',
+            tags: ['Spring Boot', 'Spring AI', 'Docker', 'DigitalOcean Gradient AI', 'MySQL', 'Angular', 'CSS', 'Spring Security'],
             screenshots: [
                 'linear-gradient(135deg, #2563eb, #1e40af)',
                 'linear-gradient(135deg, #3b82f6, #1d4ed8)',
@@ -25,14 +25,13 @@ import { TbBrandOpenai, TbApi, TbBrandAws } from 'react-icons/tb';
                 'linear-gradient(135deg, #1d4ed8, #172554)',
             ],
             architecture: [
-                'linear-gradient(135deg, #0ea5e9, #0369a1)',
-                'linear-gradient(135deg, #38bdf8, #0284c7)',
+                '/projects/architectures/arch1.jpg'
             ],
-            github: '#', live: '#', featured: true,
+            github: 'https://github.com/HajarAitAbdielmomin/AI-Technical-Interview-Simulator-for-software-engineers', live: '#', featured: true,
         },
         {
             title: 'Real-Time Chat Application',
-            description: 'A full-stack chat app with WebSocket-based real-time messaging, JWT authentication, and a responsive React/Next.js interface.',
+            description: 'A scalable e-commerce backend built with Spring Boot microservices, event-driven communication, and full Docker/AWS deployment pipeline.',
             tags: ['React', 'Next.js', 'TypeScript', 'WebSocket'],
             screenshots: [
                 'linear-gradient(135deg, #6366f1, #4338ca)',

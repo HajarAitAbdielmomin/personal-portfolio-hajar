@@ -2,7 +2,7 @@
 import { ExternalLink, Layers, Image as ImageIcon, ChevronLeft, ChevronRight } from 'lucide-react';
 import {FaGithub} from 'react-icons/fa';
 import { projects } from '@/app/lib/data';
-import {useState} from "react";
+import React, {useState} from "react";
 interface Project {
     title: string;
     description: string;
@@ -46,11 +46,13 @@ function ProjectGallery({ project }: { project: Project }) {
 
             {/* Main image */}
             <div className="relative rounded-2xl overflow-hidden shadow-lg border border-blue-100 mb-3">
-                <div
-                    className="w-full h-72 flex items-center justify-center text-white text-sm font-medium"
-                    style={{ background: currentGallery[activeImage] }}
-                >
-                    {activeTab === 'screenshots' ? `Screenshot ${activeImage + 1}` : `Architecture Diagram ${activeImage + 1}`}
+                <div className="w-full h-72 flex items-center justify-center">
+                    {currentGallery[activeImage].startsWith('/')
+                        ? <img src={currentGallery[activeImage]} alt={`image ${activeImage + 1}`} className="w-full h-full object-contain" />
+                        : <div className="w-full h-full flex items-center justify-center text-white text-sm font-medium" style={{ background: currentGallery[activeImage] }}>
+                            {activeTab === 'screenshots' ? `Screenshot ${activeImage + 1}` : `Architecture Diagram ${activeImage + 1}`}
+                          </div>
+                    }
                 </div>
                 <button
                     onClick={() => setActiveImage((p) => (p === 0 ? currentGallery.length - 1 : p - 1))}
@@ -66,19 +68,6 @@ function ProjectGallery({ project }: { project: Project }) {
                 </button>
             </div>
 
-            {/* Thumbnails */}
-            <div className="flex gap-2">
-                {currentGallery.map((color, i) => (
-                    <button
-                        key={i}
-                        onClick={() => setActiveImage(i)}
-                        className={`h-14 flex-1 rounded-lg overflow-hidden border-2 transition-all ${
-                            activeImage === i ? 'border-blue-600 scale-95' : 'border-transparent opacity-70 hover:opacity-100'
-                        }`}
-                        style={{ background: color }}
-                    />
-                ))}
-            </div>
         </div>
     );
 }
@@ -102,14 +91,14 @@ export default function ProjectsSlider() {
                 </div>
 
                 {/* Title */}
-                <div className="text-center mb-12">
-                    <p className="text-xs text-blue-600 uppercase tracking-widest mb-2 font-semibold">
-                        My work
-                    </p>
-                    <h2 className="text-4xl font-bold text-gray-900">
+                <div className="text-center mb-16">
+                    <h2 className="text-sm text-gray-400 uppercase tracking-widest mb-2">
                         Projects
-                        <span className="block w-16 h-1 bg-blue-600 mx-auto mt-2 rounded-full"></span>
                     </h2>
+                    <p className="text-3xl font-bold text-gray-900 dark:text-gray-700 mb-4">
+                        Experience working on real projects and developing professional skills
+                    </p>
+                    <span className="block w-16 h-1 bg-blue-500 mx-auto mt-2"></span>
                 </div>
 
                 {/* Slider */}
