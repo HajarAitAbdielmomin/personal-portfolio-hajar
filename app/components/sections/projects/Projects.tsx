@@ -3,6 +3,7 @@ import { ExternalLink, Layers, Image as ImageIcon, ChevronLeft, ChevronRight } f
 import {FaGithub} from 'react-icons/fa';
 import { projects } from '@/app/lib/data';
 import React, {useState} from "react";
+
 interface Project {
     title: string;
     description: string;
@@ -14,11 +15,19 @@ interface Project {
     featured: boolean;
 }
 
+const VIDEO_EXTENSIONS = ['.mp4', '.webm', '.mov', '.ogg'];
+
+function isVideo(src: string) {
+    return VIDEO_EXTENSIONS.some((ext) => src.toLowerCase().endsWith(ext));
+}
+
 function ProjectGallery({ project }: { project: Project }) {
     const [activeTab, setActiveTab] = useState('screenshots');
     const [activeImage, setActiveImage] = useState(0);
 
     const currentGallery = activeTab === 'screenshots' ? project.screenshots : project.architecture;
+    const currentItem = currentGallery[activeImage];
+    const currentIsVideo = isVideo(currentItem);
 
     return (
         <div>
@@ -44,30 +53,59 @@ function ProjectGallery({ project }: { project: Project }) {
                 )}
             </div>
 
-            {/* Main image */}
+            {/* Main media */}
             <div className="relative rounded-2xl overflow-hidden shadow-lg border border-blue-100 mb-3">
-                <div className="w-full h-72 flex items-center justify-center">
-                    {currentGallery[activeImage].startsWith('/')
-                        ? <img src={currentGallery[activeImage]} alt={`image ${activeImage + 1}`} className="w-full h-full object-contain" />
-                        : <div className="w-full h-full flex items-center justify-center text-white text-sm font-medium" style={{ background: currentGallery[activeImage] }}>
+                <div className="w-full h-72 flex items-center justify-center bg-black/5">
+                    {currentIsVideo ? (
+                        <video
+                            key={currentItem}
+                            src={currentItem}
+                            controls
+                            className="w-full h-full object-contain bg-black"
+                        />
+                    ) : currentItem.startsWith('/') ? (
+                        <img src={currentItem} alt={`image ${activeImage + 1}`} className="w-full h-full object-contain" />
+                    ) : (
+                        <div className="w-full h-full flex items-center justify-center text-white text-sm font-medium" style={{ background: currentItem }}>
                             {activeTab === 'screenshots' ? `Screenshot ${activeImage + 1}` : `Architecture Diagram ${activeImage + 1}`}
-                          </div>
-                    }
+                        </div>
+                    )}
                 </div>
-                <button
-                    onClick={() => setActiveImage((p) => (p === 0 ? currentGallery.length - 1 : p - 1))}
-                    className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 flex items-center justify-center text-blue-700 hover:bg-white transition-colors shadow"
-                >
-                    <ChevronLeft size={18} />
-                </button>
-                <button
-                    onClick={() => setActiveImage((p) => (p === currentGallery.length - 1 ? 0 : p + 1))}
-                    className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 flex items-center justify-center text-blue-700 hover:bg-white transition-colors shadow"
-                >
-                    <ChevronRight size={18} />
-                </button>
+
+                {/* Hide arrows while a video is playing so they don't fight with video controls */}
+                {!currentIsVideo && currentGallery.length > 1 && (
+                    <>
+                        <button
+                            onClick={() => setActiveImage((p) => (p === 0 ? currentGallery.length - 1 : p - 1))}
+                            className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 flex items-center justify-center text-blue-700 hover:bg-white transition-colors shadow"
+                        >
+                            <ChevronLeft size={18} />
+                        </button>
+                        <button
+                            onClick={() => setActiveImage((p) => (p === currentGallery.length - 1 ? 0 : p + 1))}
+                            className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 flex items-center justify-center text-blue-700 hover:bg-white transition-colors shadow"
+                        >
+                            <ChevronRight size={18} />
+                        </button>
+                    </>
+                )}
             </div>
 
+            {/* Dot indicators - lets you jump directly, including back out of a video */}
+            {currentGallery.length > 1 && (
+                <div className="flex items-center justify-center gap-2">
+                    {currentGallery.map((item, i) => (
+                        <button
+                            key={i}
+                            onClick={() => setActiveImage(i)}
+                            aria-label={`Go to item ${i + 1}`}
+                            className={`h-1.5 rounded-full transition-all ${
+                                activeImage === i ? 'w-6 bg-blue-600' : 'w-1.5 bg-blue-200 hover:bg-blue-300'
+                            }`}
+                        />
+                    ))}
+                </div>
+            )}
         </div>
     );
 }
@@ -90,7 +128,7 @@ export default function ProjectsSlider() {
                 {/* Divider */}
                 <div className="flex items-center mb-14">
                     <div className="flex-grow border-t-2 border-blue-100"></div>
-                    <div className="mx-4 w-3 h-3 bg-blue-600 rounded-full"></div>
+                    <div className="mx-4 w-3 h-3 bg-blue-500 rounded-full"></div>
                     <div className="flex-grow border-t-2 border-blue-100"></div>
                 </div>
 
@@ -139,7 +177,7 @@ export default function ProjectsSlider() {
                             {/* Details */}
                             <div className="lg:col-span-2">
                                 {projects[current].featured && (
-                                    <span className="inline-block bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full mb-3">
+                                    <span className="inline-block bg-blue-100 text-blue-500 text-xs font-bold px-3 py-1 rounded-full mb-3">
                     Featured Project
                   </span>
                                 )}
@@ -151,7 +189,7 @@ export default function ProjectsSlider() {
                                     {projects[current].description.length > DESCRIPTION_LIMIT && (
                                         <button
                                             onClick={() => setExpanded(v => !v)}
-                                            className="text-xs text-blue-600 hover:underline mb-4"
+                                            className="text-xs text-blue-500 hover:underline mb-4"
                                         >
                                             {expanded ? 'Show less' : 'Read more'}
                                         </button>
@@ -161,7 +199,7 @@ export default function ProjectsSlider() {
 
                                 <div className="flex flex-wrap gap-2 mb-6">
                                     {projects[current].tags.map((tag, i) => (
-                                        <span key={i} className="text-xs font-medium px-3 py-1.5 bg-blue-50 text-blue-700 rounded-lg border border-blue-100">
+                                        <span key={i} className="text-xs font-medium px-3 py-1.5 bg-blue-50 text-blue-500 rounded-lg border border-blue-100">
                       {tag}
                     </span>
                                     ))}
@@ -171,7 +209,7 @@ export default function ProjectsSlider() {
                                     <a href={projects[current].github} className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-gray-900 text-white text-sm font-medium hover:bg-gray-800 transition-colors">
                                         <FaGithub size={16} /> Code
                                     </a>
-                                    <a href={projects[current].live} className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-blue-600 text-white text-sm font-medium hover:bg-blue-700 transition-colors">
+                                    <a href={projects[current].live} className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-blue-500 text-white text-sm font-medium hover:bg-blue-700 transition-colors">
                                         <ExternalLink size={16} /> Live Demo
                                     </a>
                                 </div>
@@ -186,7 +224,7 @@ export default function ProjectsSlider() {
                                 key={i}
                                 onClick={() => goTo(i)}
                                 className={`h-2 rounded-full transition-all ${
-                                    current === i ? 'w-8 bg-blue-600' : 'w-2 bg-blue-200 hover:bg-blue-300'
+                                    current === i ? 'w-8 bg-blue-500' : 'w-2 bg-blue-200 hover:bg-blue-300'
                                 }`}
                             />
                         ))}
