@@ -18,30 +18,12 @@ import { TbBrandOpenai, TbApi, TbBrandAws } from 'react-icons/tb';
             description: 'IntervAI is an AI-powered technical interview simulator built with Spring Boot, Spring AI, and Angular. It lets developers practice interviews tailored to a specific role, tech stack, and difficulty level, with three distinct AI interviewer personas, a strict FAANG-style interviewer, a startup CTO, and a junior-friendly mentor. Each session generates adaptive questions in real time, preserves full conversation history across 8 rounds, and ends with a structured AI evaluation covering score, strengths, weaknesses, and improvement suggestions. Sessions are time-bound, resumable after disconnection, and all results are stored for progress tracking. The backend is secured with Spring Security + JWT, connected to a managed MySQL database, and the full stack is deployed on DigitalOcean App Platform.',
             tags: ['Spring Boot', 'Spring AI', 'Docker', 'DigitalOcean Gradient AI', 'MySQL', 'Angular', 'CSS', 'Spring Security'],
             screenshots: [
-                'linear-gradient(135deg, #2563eb, #1e40af)',
-                'linear-gradient(135deg, #3b82f6, #1d4ed8)',
-                'linear-gradient(135deg, #60a5fa, #2563eb)',
-                'linear-gradient(135deg, #1e3a8a, #1e40af)',
-                'linear-gradient(135deg, #1d4ed8, #172554)',
+                '/projects/video/demo1.mp4',
             ],
             architecture: [
                 '/projects/architectures/arch1.jpg'
             ],
             github: 'https://github.com/HajarAitAbdielmomin/AI-Technical-Interview-Simulator-for-software-engineers', live: '#', featured: true,
-        },
-        {
-            title: 'Real-Time Chat Application',
-            description: 'A scalable e-commerce backend built with Spring Boot microservices, event-driven communication, and full Docker/AWS deployment pipeline.',
-            tags: ['React', 'Next.js', 'TypeScript', 'WebSocket'],
-            screenshots: [
-                'linear-gradient(135deg, #6366f1, #4338ca)',
-                'linear-gradient(135deg, #818cf8, #4f46e5)',
-                'linear-gradient(135deg, #4338ca, #312e81)',
-                'linear-gradient(135deg, #a5b4fc, #6366f1)',
-                'linear-gradient(135deg, #4f46e5, #1e1b4b)',
-            ],
-            architecture: [],
-            github: '#', live: '#', featured: false,
         },
         {
             title: 'AI-Powered Content Assistant',

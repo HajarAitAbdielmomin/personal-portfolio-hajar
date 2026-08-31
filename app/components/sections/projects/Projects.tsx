@@ -26,7 +26,8 @@ function ProjectGallery({ project }: { project: Project }) {
     const [activeImage, setActiveImage] = useState(0);
 
     const currentGallery = activeTab === 'screenshots' ? project.screenshots : project.architecture;
-    const currentItem = currentGallery[activeImage];
+    const currentItem = currentGallery[activeImage] ?? currentGallery[0];
+    if (!currentItem) return null;
     const currentIsVideo = isVideo(currentItem);
 
     return (
