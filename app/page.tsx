@@ -5,14 +5,14 @@ import Certifications from "@/app/components/sections/certifications/Certificati
 import Skills from "@/app/components/sections/skills/Skills";
 import Contact from "@/app/components/sections/contact/Contact"
 import Footer from "@/app/components/layout/footer/Footer";
-import ProjectsSlider from "@/app/components/sections/projects/Projects";
+import Projects from "@/app/components/sections/projects/Projects";
 export default function Page() {
     return (
         <main className="bg-gray-50">
             <HomePage />
             <Education />
             <Internships />
-            <ProjectsSlider />
+            <Projects />
             <Certifications />
             <Skills />
             <Contact />
