@@ -16,7 +16,7 @@ import { TbBrandOpenai, TbApi, TbBrandAws } from 'react-icons/tb';
         {
             title: 'DigitalOcean Gradient™ AI Hackathon : AI Technical Interview Simulator For Software Engineers - IntervAI',
             description: 'IntervAI is an AI-powered technical interview simulator built with Spring Boot, Spring AI, and Angular. It lets developers practice interviews tailored to a specific role, tech stack, and difficulty level, with three distinct AI interviewer personas, a strict FAANG-style interviewer, a startup CTO, and a junior-friendly mentor. Each session generates adaptive questions in real time, preserves full conversation history across 8 rounds, and ends with a structured AI evaluation covering score, strengths, weaknesses, and improvement suggestions. Sessions are time-bound, resumable after disconnection, and all results are stored for progress tracking. The backend is secured with Spring Security + JWT, connected to a managed MySQL database, and the full stack is deployed on DigitalOcean App Platform.',
-            tags: ['Spring Boot', 'Spring AI', 'Docker', 'REST API','DigitalOcean Gradient AI', 'Cloud','MySQL', 'Angular', 'CSS', 'Spring Security', 'UML'],
+            tags: ['Spring Boot', 'Spring AI', 'Docker', 'REST API','DigitalOcean Gradient AI', 'Cloud','MySQL', 'TypeScript','Angular', 'CSS', 'Spring Security', 'UML'],
             screenshots: [
                 '/projects/video/demo1.mp4',
             ],
@@ -25,6 +25,27 @@ import { TbBrandOpenai, TbApi, TbBrandAws } from 'react-icons/tb';
             ],
             github: 'https://github.com/HajarAitAbdielmomin/AI-Technical-Interview-Simulator-for-software-engineers', live: '#', featured: true,
         },
+     {
+         title: 'End-to-End Digital Selection & Admission System of ENSA',
+         description: 'A digital platform designed to modernize and streamline the student selection and admission process at engineering schools. It replaces time-consuming manual procedures with a centralized and efficient system for managing applications, evaluating candidates, and processing admission results, improving speed, transparency, accuracy, and fairness throughout the admission journey.',
+         tags: ['Java', 'Spring Boot', 'TypeScript','Spring Security','CSS','Angular', 'MongoDB', 'Docker', 'Bizagi', 'BPMN', 'Docker-compose', 'UML'],
+         screenshots: [
+             '/projects/screenshot/screenshots3/img.png',
+             '/projects/screenshot/screenshots3/img_1.png',
+             '/projects/screenshot/screenshots3/img_2.png',
+             '/projects/screenshot/screenshots3/img_3.png',
+             '/projects/screenshot/screenshots3/img_4.png',
+             '/projects/screenshot/screenshots3/img_5.png',
+             '/projects/screenshot/screenshots3/img_6.png',
+             '/projects/screenshot/screenshots3/img_7.png',
+             '/projects/screenshot/screenshots3/img_8.png',
+             '/projects/screenshot/screenshots3/img_9.png',
+         ],
+         architecture: [
+             '/projects/architectures/arch2.png',
+         ],
+         github: 'https://github.com/HajarAitAbdielmomin/Selection-and-Admission-Process-to-an-engineering-school', live: '#', featured: true,
+     },
         {
             title: 'Course Management System',
             description: 'Course Management Platform is a web application developed as a final-year project for a Bachelor\'s degree in Mathematics & Computer Science at Ibn Tofail University, Kenitra. The platform manages academic resources within the Faculty of Sciences, including courses, modules, practical work (TP), tutorials (TD), and their corrections centralizing content management for both students and faculty staff.',
