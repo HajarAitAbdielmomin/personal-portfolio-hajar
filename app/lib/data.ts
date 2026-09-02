@@ -42,7 +42,7 @@ import { TbBrandOpenai, TbApi, TbBrandAws } from 'react-icons/tb';
              '/projects/screenshot/screenshots3/img_9.png',
          ],
          architecture: [
-             '/projects/architectures/arch2.png',
+             '/projects/architectures/arch5.png',
          ],
          github: 'https://github.com/HajarAitAbdielmomin/Selection-and-Admission-Process-to-an-engineering-school', live: '#', featured: true,
      },
