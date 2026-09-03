@@ -111,6 +111,18 @@ import { TbBrandOpenai, TbApi, TbBrandAws } from 'react-icons/tb';
          ],
          github: 'https://github.com/HajarAitAbdielmomin/School-management-system', live: '#', featured: true,
      },
+     {
+         title: 'Rhythmic Revelations: Analyzing Spotify\'s Songs Patterns',
+         description: 'A comprehensive BigQuery-based analytics project showcasing data loading, exploration, complex querying, aggregation, conditional filtering, DML operations, and data quality checks all within Google Cloud\'s serverless data warehouse environment.',
+         tags: ['BigQuery', 'GCP', 'Cloud', 'BigData', 'Query'],
+         screenshots: [
+             '/projects/video/demo2.mp4',
+         ],
+         architecture: [
+             '/projects/architectures/arch6.png',
+         ],
+         github: 'https://github.com/HajarAitAbdielmomin/Analyzing-Spotify-Dataset-with-BigQuery', live: '#', featured: true,
+     },
     ];
 export const skillGroups = [
 
