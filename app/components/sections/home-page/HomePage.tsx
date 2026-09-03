@@ -25,7 +25,7 @@ export default function HomePage() {
                             or sharing my knowledge through technical writing.
                         </p>
 
-                        <Link href="/resume/cv.pdf" download="Hajar_CV" className="bg-blue-500 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-600 transition-colors" >
+                        <Link href="/resume/cv_.pdf" download="Hajar_CV" className="bg-blue-500 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-600 transition-colors" >
                             Download Resume
                         </Link>
 

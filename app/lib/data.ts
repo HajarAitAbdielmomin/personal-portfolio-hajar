@@ -232,6 +232,13 @@ export const certificationsData: Certification[] = [
         courseName: 'Skyscanner Front-End Software Engineering virtual experience programme on Forage',
         certificationImage: '/certificates/skyscanner.jpg',
     },
+    {
+        id: '13',
+        organizationName: 'Hackerrank',
+        organizationLogo: '/logo/organizations/Hackerrank.png',
+        courseName: 'Java Fundamentals & Problem Solving Certification',
+        certificationImage: '/certificates/Hackerrank1.jpg',
+    },
 ];
 
 export const educationsData: Education[] = [
