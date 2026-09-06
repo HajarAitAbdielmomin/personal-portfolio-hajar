@@ -18,8 +18,9 @@ export default function SimpleFooterOverview() {
                         <div
                             key={i}
                             className="w-9 h-9 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-500 hover:bg-yellow-400 hover:border-yellow-400 hover:text-white transition-colors cursor-pointer"
+                            suppressHydrationWarning
                         >
-                            <Icon size={16} />
+                            <Icon size={16} suppressHydrationWarning />
                         </div>
                     ))}
                 </div>

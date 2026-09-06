@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-import Image from 'next/image';
+import Img from '@/app/components/ui/Img';
 
 interface InternshipCardProps {
     position: string;
@@ -67,7 +67,7 @@ const InternshipCard: React.FC<InternshipCardProps> = ({
                         </h3>
                         <div className="flex items-center gap-2">
                             {companyLogo && (
-                                <Image
+                                <Img
                                     src={companyLogo}
                                     alt={`${company} logo`}
                                     width={width}
@@ -81,7 +81,7 @@ const InternshipCard: React.FC<InternshipCardProps> = ({
                         </div>
                         {location && (
                             <div className="flex items-center gap-1 mt-1">
-                                <svg className="w-3 h-3 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
+                                <svg className="w-3 h-3 text-gray-500" fill="currentColor" viewBox="0 0 20 20" suppressHydrationWarning>
                                     <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                                 </svg>
                                 <p className="text-xs text-gray-500">
@@ -169,7 +169,7 @@ const InternshipCard: React.FC<InternshipCardProps> = ({
                                         disabled={currentPage === 0}
                                         className="p-1 rounded-full hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed"
                                     >
-                                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" suppressHydrationWarning>
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                                         </svg>
                                     </button>
@@ -181,7 +181,7 @@ const InternshipCard: React.FC<InternshipCardProps> = ({
                                         disabled={currentPage === totalPages - 1}
                                         className="p-1 rounded-full hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed"
                                     >
-                                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" suppressHydrationWarning>
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                         </svg>
                                     </button>
@@ -196,7 +196,7 @@ const InternshipCard: React.FC<InternshipCardProps> = ({
                                         key={currentPage * imagesPerPage + index}
                                         className="relative h-40 bg-gray-200 rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300"
                                     >
-                                        <Image
+                                        <Img
                                             src={image}
                                             alt={`UI work ${currentPage * imagesPerPage + index + 1}`}
                                             fill

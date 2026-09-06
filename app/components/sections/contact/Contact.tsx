@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
+import Img from '@/app/components/ui/Img';
 import {
     FaBuilding, FaEnvelope, FaPhoneAlt,
     FaMediumM, FaLinkedin, FaGithub,
@@ -47,7 +47,7 @@ export default function Contact() {
         <section id="contact" className="w-full relative">
             {/* Background image with overlay */}
             <div className="relative h-72 w-full">
-                <Image
+                <Img
                     src="/images/contact-bg.png"
                     alt="Contact background"
                     fill
@@ -78,8 +78,8 @@ export default function Contact() {
 
                         <div className="space-y-6">
                             <div className="flex items-start gap-4">
-                                <div className="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-white flex-shrink-0">
-                                    <FaBuilding size={16} />
+                                <div className="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-white flex-shrink-0" suppressHydrationWarning>
+                                    <FaBuilding size={16} suppressHydrationWarning />
                                 </div>
                                 <div>
                                     <p className="font-semibold text-gray-900 text-sm">Based In</p>
@@ -88,8 +88,8 @@ export default function Contact() {
                             </div>
 
                             <div className="flex items-start gap-4">
-                                <div className="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-white flex-shrink-0">
-                                    <FaEnvelope size={16} />
+                                <div className="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-white flex-shrink-0" suppressHydrationWarning>
+                                    <FaEnvelope size={16} suppressHydrationWarning />
                                 </div>
                                 <div>
                                     <p className="font-semibold text-gray-900 text-sm">Email Me</p>
@@ -99,8 +99,8 @@ export default function Contact() {
                             </div>
 
                             <div className="flex items-start gap-4">
-                                <div className="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-white flex-shrink-0">
-                                    <FaPhoneAlt size={16} />
+                                <div className="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-white flex-shrink-0" suppressHydrationWarning>
+                                    <FaPhoneAlt size={16} suppressHydrationWarning />
                                 </div>
                                 <div>
                                     <p className="font-semibold text-gray-900 text-sm">Call Me</p>
@@ -119,8 +119,9 @@ export default function Contact() {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="w-9 h-9 rounded-full bg-blue-500 flex items-center justify-center text-white hover:bg-blue-700 transition-colors"
+                                        suppressHydrationWarning
                                     >
-                                        <social.icon size={14} />
+                                        <social.icon size={14} suppressHydrationWarning />
                                     </a>
                                 ))}
                             </div>

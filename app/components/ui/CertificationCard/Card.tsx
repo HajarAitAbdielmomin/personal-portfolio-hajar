@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
+import Img from '@/app/components/ui/Img';
 
 interface CertificationCardProps {
     id: string;
@@ -26,7 +26,7 @@ const CertificationCard: React.FC<CertificationCardProps> = ({
         >
             {/* Certification Image */}
             <div className="relative h-64 bg-gray-100 overflow-hidden">
-                <Image
+                <Img
                     src={certificationImage}
                     alt={courseName}
                     fill
@@ -45,7 +45,7 @@ const CertificationCard: React.FC<CertificationCardProps> = ({
                 {/* Organization Logo and Name */}
                 <div className="flex items-center gap-3 mb-4">
                     <div className="relative w-12 h-12 bg-white rounded-lg overflow-hidden shrink-0 shadow-sm">
-                        <Image
+                        <Img
                             src={organizationLogo}
                             alt={organizationName}
                             fill

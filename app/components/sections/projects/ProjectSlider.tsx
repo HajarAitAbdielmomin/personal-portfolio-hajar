@@ -29,14 +29,16 @@ export default function ProjectsSlider({ projects }: { projects: Project[] }) {
                     <button
                         onClick={() => goTo(current - 1)}
                         className="w-10 h-10 rounded-full bg-white border border-blue-100 flex items-center justify-center text-blue-700 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-colors shadow-sm"
+                        suppressHydrationWarning
                     >
-                        <ChevronLeft size={18} />
+                        <ChevronLeft size={18} suppressHydrationWarning />
                     </button>
                     <button
                         onClick={() => goTo(current + 1)}
                         className="w-10 h-10 rounded-full bg-white border border-blue-100 flex items-center justify-center text-blue-700 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-colors shadow-sm"
+                        suppressHydrationWarning
                     >
-                        <ChevronRight size={18} />
+                        <ChevronRight size={18} suppressHydrationWarning />
                     </button>
                 </div>
             </div>
@@ -80,11 +82,11 @@ export default function ProjectsSlider({ projects }: { projects: Project[] }) {
                         </div>
 
                         <div className="flex items-center gap-3">
-                            <a href={activeProject.github} className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-gray-900 text-white text-sm font-medium hover:bg-gray-800 transition-colors">
-                                <FaGithub size={16} /> Code
+                            <a href={activeProject.github} className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-gray-900 text-white text-sm font-medium hover:bg-gray-800 transition-colors" suppressHydrationWarning>
+                                <FaGithub size={16} suppressHydrationWarning /> Code
                             </a>
-                            <a href={activeProject.live} className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-blue-500 text-white text-sm font-medium hover:bg-blue-700 transition-colors">
-                                <ExternalLink size={16} /> Live Demo
+                            <a href={activeProject.live} className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-blue-500 text-white text-sm font-medium hover:bg-blue-700 transition-colors" suppressHydrationWarning>
+                                <ExternalLink size={16} suppressHydrationWarning /> Live Demo
                             </a>
                         </div>
                     </div>

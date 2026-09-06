@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Img from '@/app/components/ui/Img';
 import { FaLinkedin, FaHackerrank, FaGithub, FaMediumM } from 'react-icons/fa';
 import Link from "next/link";
 
@@ -36,32 +36,36 @@ export default function HomePage() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-gray-700 hover:text-blue-500 transition-colors"
+                                suppressHydrationWarning
                             >
-                                <FaLinkedin size={24} />
+                                <FaLinkedin size={24} suppressHydrationWarning />
                             </a>
                             <a
                                 href="https://medium.com/@hajar.aitabdielmomin"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-gray-700 hover:text-blue-500 transition-colors"
+                                suppressHydrationWarning
                             >
-                                <FaMediumM size={24} />
+                                <FaMediumM size={24} suppressHydrationWarning />
                             </a>
                             <a
                                 href="https://github.com/HajarAitAbdielmomin"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-gray-700 hover:text-blue-500 transition-colors"
+                                suppressHydrationWarning
                             >
-                                <FaGithub size={24} />
+                                <FaGithub size={24} suppressHydrationWarning />
                             </a>
                             <a
                                 href="https://www.hackerrank.com/profile/aithajar55"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-gray-700 hover:text-blue-500 transition-colors"
+                                suppressHydrationWarning
                             >
-                                <FaHackerrank size={24} />
+                                <FaHackerrank size={24} suppressHydrationWarning />
                             </a>
                         </div>
                     </div>
@@ -74,7 +78,7 @@ export default function HomePage() {
 
                             {/* Profile Image */}
                             <div className="relative w-80 h-80 rounded-full overflow-hidden hover:scale-105 transition-transform duration-300">
-                                <Image
+                                <Img
                                     src="/images/photo.png"
                                     alt="AitHajar"
                                     fill

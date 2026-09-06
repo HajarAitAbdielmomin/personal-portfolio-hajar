@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Img from '@/app/components/ui/Img';
 
 interface EducationCardProps {
     logo: string;
@@ -29,7 +29,7 @@ export default function EducationCard({
             <div className="flex items-start justify-between mb-4">
                 {/* Logo */}
                 <div className="w-14 h-14   flex items-center justify-center overflow-hidden ">
-                    <Image
+                    <Img
                         src={logo}
                         alt={schoolName}
                         width={56}

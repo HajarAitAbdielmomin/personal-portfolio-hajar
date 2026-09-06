@@ -1,5 +1,5 @@
 "use client"
-import Image from "next/image";
+import Img from "@/app/components/ui/Img";
 
 const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -14,7 +14,7 @@ export default function Header() {
             <nav className="max-w-7xl mx-auto flex items-center justify-between h-full">
                 {/* Logo */}
                 <div className="h-12 flex items-center">
-                    <Image
+                    <Img
                         src="/logo/hajar-logo.png"
                         alt="hajar logo"
                         width={100}

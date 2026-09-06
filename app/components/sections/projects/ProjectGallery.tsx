@@ -27,8 +27,9 @@ export default function ProjectGallery({ project }: { project: Project }) {
                     className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                         activeTab === 'screenshots' ? 'bg-blue-600 text-white' : 'bg-blue-50 text-blue-700 hover:bg-blue-100'
                     }`}
+                    suppressHydrationWarning
                 >
-                    <ImageIcon size={15} /> Screenshots
+                    <ImageIcon size={15} suppressHydrationWarning /> Screenshots
                 </button>
                 {project.architecture.length > 0 && (
                     <button
@@ -36,8 +37,9 @@ export default function ProjectGallery({ project }: { project: Project }) {
                         className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                             activeTab === 'architecture' ? 'bg-blue-600 text-white' : 'bg-blue-50 text-blue-700 hover:bg-blue-100'
                         }`}
+                        suppressHydrationWarning
                     >
-                        <Layers size={15} /> Architecture
+                        <Layers size={15} suppressHydrationWarning /> Architecture
                     </button>
                 )}
             </div>
@@ -67,14 +69,16 @@ export default function ProjectGallery({ project }: { project: Project }) {
                         <button
                             onClick={() => setActiveImage((p) => (p === 0 ? currentGallery.length - 1 : p - 1))}
                             className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 flex items-center justify-center text-blue-700 hover:bg-white transition-colors shadow"
+                            suppressHydrationWarning
                         >
-                            <ChevronLeft size={18} />
+                            <ChevronLeft size={18} suppressHydrationWarning />
                         </button>
                         <button
                             onClick={() => setActiveImage((p) => (p === currentGallery.length - 1 ? 0 : p + 1))}
                             className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 flex items-center justify-center text-blue-700 hover:bg-white transition-colors shadow"
+                            suppressHydrationWarning
                         >
-                            <ChevronRight size={18} />
+                            <ChevronRight size={18} suppressHydrationWarning />
                         </button>
                     </>
                 )}
