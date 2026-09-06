@@ -123,6 +123,18 @@ import { TbBrandOpenai, TbApi, TbBrandAws } from 'react-icons/tb';
          ],
          github: 'https://github.com/HajarAitAbdielmomin/Analyzing-Spotify-Dataset-with-BigQuery', live: '#', featured: true,
      },
+     {
+         title: 'Spring AI model comparator OpenAI-Ollama-Claude',
+         description: 'A full-stack application that sends a single user prompt to OpenAI, Anthropic, and a locally running Ollama model at the same time. It displays the three responses side by side, making it easy to compare model behavior, response time, and approximate token usage.',
+         tags: ['Java', 'Spring Boot', 'Spring AI', 'OpenAI API', 'Anthropic API', 'Ollama API', 'ReactJs', 'Vite'],
+         screenshots: [
+             '/projects/video/demo3.mp4',
+         ],
+         architecture: [
+             '/projects/architectures/arch7.png',
+         ],
+         github: 'https://github.com/HajarAitAbdielmomin/Spring-AI-model-comparator_OpenAI-Ollama-Claude', live: '#', featured: true,
+     },
     ];
 export const skillGroups = [
 
