@@ -21,7 +21,7 @@ import { TbBrandOpenai, TbApi, TbBrandAws } from 'react-icons/tb';
                 '/projects/video/demo1.mp4',
             ],
             architecture: [
-                '/projects/architectures/arch1.jpg'
+                'https://www.youtube.com/watch?v=sc45rTcTK2M&t=1s'
             ],
             github: 'https://github.com/HajarAitAbdielmomin/AI-Technical-Interview-Simulator-for-software-engineers', live: '#',
         },
@@ -116,7 +116,7 @@ import { TbBrandOpenai, TbApi, TbBrandAws } from 'react-icons/tb';
          description: 'A comprehensive BigQuery-based analytics project showcasing data loading, exploration, complex querying, aggregation, conditional filtering, DML operations, and data quality checks all within Google Cloud\'s serverless data warehouse environment.',
          tags: ['BigQuery', 'GCP', 'Cloud', 'BigData', 'Query'],
          screenshots: [
-             '/projects/video/demo2.mp4',
+             'https://youtu.be/P94mM6AkdJk',
          ],
          architecture: [
              '/projects/architectures/arch6.png',
@@ -128,7 +128,7 @@ import { TbBrandOpenai, TbApi, TbBrandAws } from 'react-icons/tb';
          description: 'A full-stack application that sends a single user prompt to OpenAI, Anthropic, and a locally running Ollama model at the same time. It displays the three responses side by side, making it easy to compare model behavior, response time, and approximate token usage.',
          tags: ['Java', 'Spring Boot', 'Spring AI', 'OpenAI API', 'Anthropic API', 'Ollama API', 'ReactJs', 'Vite'],
          screenshots: [
-             '/projects/video/demo3.mp4',
+             'https://youtu.be/4QP3nTXdfD4',
          ],
          architecture: [
              '/projects/architectures/arch7.png',
