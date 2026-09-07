@@ -23,7 +23,7 @@ export default function ProjectsSlider({ projects }: { projects: Project[] }) {
             {/* Slide counter + nav */}
             <div className="flex items-center justify-between mb-6">
         <span className="text-sm font-medium text-gray-400">
-          {String(current + 1).padStart(2, '0')} / {String(projects.length).padStart(2, '0')}
+
         </span>
                 <div className="flex items-center gap-2">
                     <button
@@ -53,11 +53,8 @@ export default function ProjectsSlider({ projects }: { projects: Project[] }) {
 
                     {/* Details */}
                     <div className="lg:col-span-2">
-                        {activeProject.featured && (
-                            <span className="inline-block bg-blue-100 text-blue-500 text-xs font-bold px-3 py-1 rounded-full mb-3">
-                Featured Project
-              </span>
-                        )}
+
+                       <span className="inline-block font-bold px-3 py-1 " />
                         <h3 className="text-2xl font-bold text-gray-900 mb-3">{activeProject.title}</h3>
                         <p className="text-sm text-gray-500 leading-relaxed mb-1">
                             {expanded || activeProject.description.length <= DESCRIPTION_LIMIT

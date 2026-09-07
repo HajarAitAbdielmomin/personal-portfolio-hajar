@@ -29,7 +29,7 @@ export default function ProjectGallery({ project }: { project: Project }) {
                     }`}
                     suppressHydrationWarning
                 >
-                    <ImageIcon size={15} suppressHydrationWarning /> Screenshots
+                    <ImageIcon size={15} suppressHydrationWarning /> Demo
                 </button>
                 {project.architecture.length > 0 && (
                     <button
