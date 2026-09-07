@@ -9,6 +9,10 @@ function isVideo(src: string) {
     return VIDEO_EXTENSIONS.some((ext) => src.toLowerCase().endsWith(ext));
 }
 
+function isYouTube(src: string) {
+    return src.includes('youtube.com/embed');
+}
+
 export default function ProjectGallery({ project }: { project: Project }) {
     const [activeTab, setActiveTab] = useState('screenshots');
     const [activeImage, setActiveImage] = useState(0);
@@ -47,7 +51,14 @@ export default function ProjectGallery({ project }: { project: Project }) {
             {/* Main media */}
             <div className="relative rounded-2xl overflow-hidden shadow-lg border border-blue-100 mb-3">
                 <div className="w-full h-72 flex items-center justify-center bg-black/5">
-                    {currentIsVideo ? (
+                    {isYouTube(currentItem) ? (
+                        <iframe
+                            key={currentItem}
+                            src={currentItem}
+                            allowFullScreen
+                            className="w-full h-full"
+                        />
+                    ) : currentIsVideo ? (
                         <video
                             key={currentItem}
                             src={currentItem}
@@ -64,7 +75,7 @@ export default function ProjectGallery({ project }: { project: Project }) {
                 </div>
 
                 {/* Hide arrows while a video is playing so they don't fight with video controls */}
-                {!currentIsVideo && currentGallery.length > 1 && (
+                {!currentIsVideo && !isYouTube(currentItem) && currentGallery.length > 1 && (
                     <>
                         <button
                             onClick={() => setActiveImage((p) => (p === 0 ? currentGallery.length - 1 : p - 1))}

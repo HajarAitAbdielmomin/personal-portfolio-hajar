@@ -6,5 +6,4 @@ export interface Project {
     architecture: string[];
     github: string;
     live: string;
-    featured: boolean;
 }

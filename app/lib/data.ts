@@ -18,10 +18,10 @@ import { TbBrandOpenai, TbApi, TbBrandAws } from 'react-icons/tb';
             description: 'IntervAI is an AI-powered technical interview simulator built with Spring Boot, Spring AI, and Angular. It lets developers practice interviews tailored to a specific role, tech stack, and difficulty level, with three distinct AI interviewer personas, a strict FAANG-style interviewer, a startup CTO, and a junior-friendly mentor. Each session generates adaptive questions in real time, preserves full conversation history across 8 rounds, and ends with a structured AI evaluation covering score, strengths, weaknesses, and improvement suggestions. Sessions are time-bound, resumable after disconnection, and all results are stored for progress tracking. The backend is secured with Spring Security + JWT, connected to a managed MySQL database, and the full stack is deployed on DigitalOcean App Platform.',
             tags: ['Spring Boot', 'Spring AI', 'Docker', 'REST API','DigitalOcean Gradient AI', 'Cloud','MySQL', 'TypeScript','Angular', 'CSS', 'Spring Security', 'UML'],
             screenshots: [
-                '/projects/video/demo1.mp4',
+                'https://www.youtube.com/embed/sc45rTcTK2M',
             ],
             architecture: [
-                'https://www.youtube.com/watch?v=sc45rTcTK2M&t=1s'
+                '/projects/architectures/arch1.jpg'
             ],
             github: 'https://github.com/HajarAitAbdielmomin/AI-Technical-Interview-Simulator-for-software-engineers', live: '#',
         },
@@ -116,7 +116,7 @@ import { TbBrandOpenai, TbApi, TbBrandAws } from 'react-icons/tb';
          description: 'A comprehensive BigQuery-based analytics project showcasing data loading, exploration, complex querying, aggregation, conditional filtering, DML operations, and data quality checks all within Google Cloud\'s serverless data warehouse environment.',
          tags: ['BigQuery', 'GCP', 'Cloud', 'BigData', 'Query'],
          screenshots: [
-             'https://youtu.be/P94mM6AkdJk',
+             'https://www.youtube.com/embed/P94mM6AkdJk',
          ],
          architecture: [
              '/projects/architectures/arch6.png',
@@ -128,7 +128,7 @@ import { TbBrandOpenai, TbApi, TbBrandAws } from 'react-icons/tb';
          description: 'A full-stack application that sends a single user prompt to OpenAI, Anthropic, and a locally running Ollama model at the same time. It displays the three responses side by side, making it easy to compare model behavior, response time, and approximate token usage.',
          tags: ['Java', 'Spring Boot', 'Spring AI', 'OpenAI API', 'Anthropic API', 'Ollama API', 'ReactJs', 'Vite'],
          screenshots: [
-             'https://youtu.be/4QP3nTXdfD4',
+             'https://www.youtube.com/embed/4QP3nTXdfD4',
          ],
          architecture: [
              '/projects/architectures/arch7.png',
