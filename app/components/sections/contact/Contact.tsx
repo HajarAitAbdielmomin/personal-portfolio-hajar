@@ -1,13 +1,15 @@
 'use client';
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Img from '@/app/components/ui/Img';
 import {
     FaBuilding, FaEnvelope, FaPhoneAlt,
     FaMediumM, FaLinkedin, FaGithub,
 } from 'react-icons/fa';
+import { useInView } from '@/app/hooks/useInView';
 
 export default function Contact() {
+    const { ref, inView } = useInView();
     const [formData, setFormData] = useState({
         name: '',
         company: '',
@@ -44,7 +46,7 @@ export default function Contact() {
     ];
 
     return (
-        <section id="contact" className="w-full relative">
+        <section ref={ref as React.RefObject<HTMLElement>} id="contact" className="w-full relative">
             {/* Background image with overlay */}
             <div className="relative h-72 w-full">
                 <Img
@@ -68,7 +70,7 @@ export default function Contact() {
 
             {/* Card overlapping the image */}
             <div className="max-w-5xl mx-auto px-8 -mt-24 relative z-10 pb-20">
-                <div className="bg-white rounded-2xl shadow-xl grid grid-cols-1 lg:grid-cols-2 overflow-hidden">
+                <div className={`bg-white rounded-2xl shadow-xl grid grid-cols-1 lg:grid-cols-2 overflow-hidden reveal ${inView ? 'visible' : ''}`}>
                     {/* Left - Get in touch */}
                     <div className="p-8 md:p-10 border-b lg:border-b-0 lg:border-r border-gray-100">
                         <h3 className="text-2xl font-bold text-gray-900 mb-3">Get in touch</h3>

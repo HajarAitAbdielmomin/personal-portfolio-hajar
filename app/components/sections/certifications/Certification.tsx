@@ -2,8 +2,10 @@
 import React, { useState, useEffect } from 'react';
 import CertificationCard from '@/app/components/ui/CertificationCard/Card';
 import { certificationsData } from '@/app/lib/data';
+import { useInView } from '@/app/hooks/useInView';
 
 const Certifications: React.FC = () => {
+    const { ref, inView } = useInView();
     const [currentIndex, setCurrentIndex] = useState(0);
     const [autoplayDelay, setAutoplayDelay] = useState(3000);
     const cardsPerView = 3;
@@ -31,7 +33,7 @@ const Certifications: React.FC = () => {
         setCurrentIndex(index);
     };
     return (
-        <section id="certification" className="py-20 px-6 md:px-12 bg-linear-to-b from-white via-blue-50/30 to-white dark:from-gray-50 dark:via-blue-100 dark:to-gray-50">
+        <section ref={ref as React.RefObject<HTMLElement>} id="certification" className="py-20 px-6 md:px-12 bg-linear-to-b from-white via-blue-50/30 to-white dark:from-gray-50 dark:via-blue-100 dark:to-gray-50">
                 {/* Styled horizontal line */}
                 <div className="flex items-center mb-20">
                     <div className="grow border-t-2 border-gray-300"></div>
@@ -43,7 +45,7 @@ const Certifications: React.FC = () => {
 
                 <div className="max-w-6xl mx-auto">
                 {/* Section Header */}
-                <div className="text-center mb-16">
+                <div className={`text-center mb-16 reveal ${inView ? 'visible' : ''}`}>
                     <h2 className="text-sm text-gray-400 uppercase tracking-widest mb-2">
                         My Certifications
                     </h2>
@@ -53,6 +55,7 @@ const Certifications: React.FC = () => {
                     <span className="block w-16 h-1 bg-blue-500 mx-auto mt-2"></span>
                 </div>
 
+                <div className={`reveal reveal-delay-2 ${inView ? 'visible' : ''}`}>
                 {/* Certifications Slider */}
                 <div className="relative">
                     {/* Left Arrow */}
@@ -112,6 +115,7 @@ const Certifications: React.FC = () => {
                             />
                         ))}
                     </div>
+                </div>
                 </div>
 
             </div>

@@ -88,15 +88,15 @@
 }
 
 .animate-fade-in {
-  animation: fadeIn 0.8s ease-out;
+  animation: fadeIn 0.8s ease-out both;
 }
 
 .animate-fade-in-up {
-  animation: fadeInUp 0.8s ease-out;
+  animation: fadeInUp 0.8s ease-out both;
 }
 
 .animate-fade-in-left {
-  animation: fadeInLeft 0.8s ease-out;
+  animation: fadeInLeft 0.8s ease-out both;
 }
 
 .animate-fade-in-right {
@@ -104,15 +104,15 @@
 }
 
 .animate-scale-in {
-  animation: scaleIn 0.6s ease-out;
+  animation: scaleIn 0.6s ease-out both;
 }
 
 .animate-slide-in-left {
-  animation: slideInLeft 0.8s ease-out;
+  animation: slideInLeft 0.8s ease-out both;
 }
 
 .animate-slide-in-right {
-  animation: slideInRight 0.8s ease-out;
+  animation: slideInRight 0.8s ease-out both;
 }
 
 .animate-blob {
@@ -166,6 +166,31 @@
     transform: translateX(-50%);
   }
 }
+
+/* Scroll-triggered animation base states */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.reveal.from-left {
+  transform: translateX(-40px);
+}
+.reveal.from-right {
+  transform: translateX(40px);
+}
+.reveal.scale {
+  transform: scale(0.92);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
 
 :root {
   --background: #ffffff;
