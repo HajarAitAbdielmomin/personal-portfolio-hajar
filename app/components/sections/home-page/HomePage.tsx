@@ -8,6 +8,16 @@ export default function HomePage() {
                 <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-10 items-center p-10">
                     {/* Left Content */}
                     <div className="space-y-6 animate-fade-in-left">
+                        {/* Availability Badge */}
+                        <div className="inline-flex items-center gap-2 bg-green-50 border border-green-200 rounded-full px-4 py-1.5 animate-fade-in-up">
+                            <span className="relative flex h-2.5 w-2.5">
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
+                            </span>
+                            <span className="text-sm font-medium text-green-700">
+                                Actively seeking a Full-Time opportunity (CDI)
+                            </span>
+                        </div>
                         <h1 className="text-5xl lg:text-6xl font-bold">
                             Hi,
                             <br />

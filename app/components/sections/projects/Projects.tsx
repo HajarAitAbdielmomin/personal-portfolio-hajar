@@ -5,13 +5,15 @@ import ProjectSlider from './ProjectSlider';
 
 export default function Projects() {
     return (
-        <section className="w-full py-16 px-8 bg-gray-50" id="project">
-            <div className="max-w-6xl mx-auto">
-                {/* Divider */}
-                <div className="flex items-center mb-14">
-                    <div className="flex-grow border-t-2 border-blue-100"></div>
-                    <div className="mx-4 w-3 h-3 bg-blue-500 rounded-full"></div>
-                    <div className="flex-grow border-t-2 border-blue-100"></div>
+        <section className="w-full py-20 px-8 bg-gray-50" id="project">
+            <div className="max-w-7xl mx-auto">
+                {/* Styled horizontal line */}
+                <div className="flex items-center mb-20">
+                    <div className="flex-grow border-t-2 border-gray-300"></div>
+                    <div className="mx-4">
+                        <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                    </div>
+                    <div className="flex-grow border-t-2 border-gray-300"></div>
                 </div>
 
                 {/* Title */}
