@@ -5,5 +5,4 @@ export interface Project {
     screenshots: string[];
     architecture: string[];
     github: string;
-    live: string;
 }

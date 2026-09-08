@@ -23,7 +23,7 @@ import { TbBrandOpenai, TbApi, TbBrandAws } from 'react-icons/tb';
             architecture: [
                 '/projects/architectures/arch1.jpg'
             ],
-            github: 'https://github.com/HajarAitAbdielmomin/AI-Technical-Interview-Simulator-for-software-engineers', live: '#',
+    github: 'https://github.com/HajarAitAbdielmomin/AI-Technical-Interview-Simulator-for-software-engineers',
         },
      {
          title: 'End-to-End Digital Selection & Admission System of ENSA',
@@ -44,7 +44,7 @@ import { TbBrandOpenai, TbApi, TbBrandAws } from 'react-icons/tb';
          architecture: [
              '/projects/architectures/arch5.png',
          ],
-         github: 'https://github.com/HajarAitAbdielmomin/Selection-and-Admission-Process-to-an-engineering-school', live: '#',
+         github: 'https://github.com/HajarAitAbdielmomin/Selection-and-Admission-Process-to-an-engineering-school',
      },
         {
             title: 'Course Management System',
@@ -73,7 +73,7 @@ import { TbBrandOpenai, TbApi, TbBrandAws } from 'react-icons/tb';
             architecture: [
                 '/projects/architectures/arch2.png',
             ],
-            github: 'https://github.com/HajarAitAbdielmomin/Course-Management-System', live: '#',
+            github: 'https://github.com/HajarAitAbdielmomin/Course-Management-System',
         },
      {
          title: 'Fully Integrated School Management System',
@@ -109,7 +109,7 @@ import { TbBrandOpenai, TbApi, TbBrandAws } from 'react-icons/tb';
              '/projects/architectures/arch3.png',
              '/projects/architectures/arch4.png',
          ],
-         github: 'https://github.com/HajarAitAbdielmomin/School-management-system', live: '#',
+         github: 'https://github.com/HajarAitAbdielmomin/School-management-system',
      },
      {
          title: 'Rhythmic Revelations: Analyzing Spotify\'s Songs Patterns',
@@ -121,7 +121,7 @@ import { TbBrandOpenai, TbApi, TbBrandAws } from 'react-icons/tb';
          architecture: [
              '/projects/architectures/arch6.png',
          ],
-         github: 'https://github.com/HajarAitAbdielmomin/Analyzing-Spotify-Dataset-with-BigQuery', live: '#',
+         github: 'https://github.com/HajarAitAbdielmomin/Analyzing-Spotify-Dataset-with-BigQuery',
      },
      {
          title: 'Spring AI model comparator OpenAI-Ollama-Claude',
@@ -133,7 +133,7 @@ import { TbBrandOpenai, TbApi, TbBrandAws } from 'react-icons/tb';
          architecture: [
              '/projects/architectures/arch7.png',
          ],
-         github: 'https://github.com/HajarAitAbdielmomin/Spring-AI-model-comparator_OpenAI-Ollama-Claude', live: '#',
+         github: 'https://github.com/HajarAitAbdielmomin/Spring-AI-model-comparator_OpenAI-Ollama-Claude',
      },
      {
          title: 'Personal Blog Website',
@@ -146,7 +146,25 @@ import { TbBrandOpenai, TbApi, TbBrandAws } from 'react-icons/tb';
          architecture: [
              '/projects/architectures/arch8.png',
          ],
-         github: 'https://github.com/HajarAitAbdielmomin/personal-blog-website', live: '#',
+         github: 'https://github.com/HajarAitAbdielmomin/personal-blog-website',
+     },
+     {
+         title: 'Backend Project management system - Taskify',
+         description: 'A project management backend that helps teams organize projects, backlogs, tasks, and team members in one system. It provides secure, role-based access with JWT authentication and exposes REST APIs for managing project workflows. Interactive Swagger documentation makes the API easy to explore and test.',
+         tags: ['Spring Boot', 'Spring Security', 'Swagger', 'JWT', 'Docker', 'Mysql', 'Docker compose', 'REST API'],
+         screenshots: [
+             '/projects/screenshot/screenshots5/img.png',
+             '/projects/screenshot/screenshots5/img1.png',
+             '/projects/screenshot/screenshots5/img2.png',
+             '/projects/screenshot/screenshots5/img3.png',
+             '/projects/screenshot/screenshots5/img4.png',
+             '/projects/screenshot/screenshots5/img5.png',
+
+         ],
+         architecture: [
+             '/projects/architectures/arch9.png',
+         ],
+         github: 'https://github.com/HajarAitAbdielmomin/personal-blog-website',
      },
     ];
 export const skillGroups = [

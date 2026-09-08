@@ -1,5 +1,5 @@
 "use client"
-import { ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import {FaGithub} from 'react-icons/fa';
 import { Project } from '@/app/lib/types';
 import React, {useState} from "react";
@@ -81,9 +81,6 @@ export default function ProjectsSlider({ projects }: { projects: Project[] }) {
                         <div className="flex items-center gap-3">
                             <a href={activeProject.github} className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-gray-900 text-white text-sm font-medium hover:bg-gray-800 transition-colors" suppressHydrationWarning>
                                 <FaGithub size={16} suppressHydrationWarning /> Code
-                            </a>
-                            <a href={activeProject.live} className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-blue-500 text-white text-sm font-medium hover:bg-blue-700 transition-colors" suppressHydrationWarning>
-                                <ExternalLink size={16} suppressHydrationWarning /> Live Demo
                             </a>
                         </div>
                     </div>
