@@ -1,22 +1,8 @@
 "use client"
 import React, { useState } from 'react';
 import Img from '@/app/components/ui/Img';
+import {InternshipCardProps} from "@/app/lib/types";
 
-interface InternshipCardProps {
-    position: string;
-    company: string;
-    companyLogo: string;
-    location: string;
-    startDate: string;
-    endDate: string;
-    tasks: string[];
-    technologies: string[];
-    uiImages?: string[];
-    status?: 'completed' | 'in-progress' | 'upcoming';
-    topic?: string;
-    width: number;
-    height: number;
-}
 
 const InternshipCard: React.FC<InternshipCardProps> = ({
                                                            position,

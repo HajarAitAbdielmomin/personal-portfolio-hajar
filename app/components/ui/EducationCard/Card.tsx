@@ -1,16 +1,7 @@
 import Img from '@/app/components/ui/Img';
+import {EducationCardProps} from "@/app/lib/types";
 
-interface EducationCardProps {
-    logo: string;
-    schoolName: string;
-    location: string;
-    degree: string;
-    major: string;
-    startYear: string;
-    endYear: string;
-    isGraduated?: boolean;
-    footerText?: string;
-}
+
 
 export default function EducationCard({
                                           logo,

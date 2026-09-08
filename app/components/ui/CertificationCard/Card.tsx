@@ -1,13 +1,6 @@
 import React from 'react';
 import Img from '@/app/components/ui/Img';
-
-interface CertificationCardProps {
-    id: string;
-    organizationName: string;
-    organizationLogo: string;
-    courseName: string;
-    certificationImage: string;
-}
+import { CertificationCardProps } from '@/app/lib/types';
 
 const CertificationCard: React.FC<CertificationCardProps> = ({
                                                                  id,

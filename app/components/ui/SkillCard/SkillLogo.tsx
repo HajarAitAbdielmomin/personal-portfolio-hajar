@@ -1,10 +1,5 @@
-import { IconType } from 'react-icons';
+import {SkillLogoProps} from "@/app/lib/types";
 
-interface SkillLogoProps {
-    icon: IconType;
-    name: string;
-    color?: string;
-}
 
 export default function SkillLogo({ icon: Icon, name, color = '#374151' }: SkillLogoProps) {
     return (

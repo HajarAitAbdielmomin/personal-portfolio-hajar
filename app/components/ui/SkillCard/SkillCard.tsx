@@ -1,8 +1,5 @@
-interface SkillCardProps {
-    icon: React.ReactNode;
-    title: string;
-    skills: string[];
-}
+import {SkillCardProps} from "@/app/lib/types";
+
 
 export default function SkillCategoryCard({ icon, title, skills }: SkillCardProps) {
     return (
