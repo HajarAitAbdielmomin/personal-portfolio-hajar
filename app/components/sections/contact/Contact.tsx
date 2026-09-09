@@ -7,7 +7,7 @@ import {
     FaMediumM, FaLinkedin, FaGithub,
 } from 'react-icons/fa';
 import { useInView } from '@/app/hooks/useInView';
-
+import {sendEmail} from "@/app/services/email_service/email_service";
 export default function Contact() {
     const { ref, inView } = useInView();
     const [formData, setFormData] = useState({
@@ -27,13 +27,16 @@ export default function Contact() {
     };
 
     const handleSubmit = async (e: React.FormEvent) => {
+
         e.preventDefault();
         setStatus('sending');
         try {
-            // Replace with your actual submission logic
-            await new Promise((resolve) => setTimeout(resolve, 1000));
-            setStatus('sent');
-            setFormData({ name: '', company: '', phone: '', email: '', subject: '', message: '' });
+            const data = await sendEmail(formData);
+            if (data) {
+                await new Promise((resolve) => setTimeout(resolve, 1000));
+                setStatus('sent');
+                setFormData({ name: '', company: '', phone: '', email: '', subject: '', message: '' });
+            }
         } catch {
             setStatus('error');
         }
