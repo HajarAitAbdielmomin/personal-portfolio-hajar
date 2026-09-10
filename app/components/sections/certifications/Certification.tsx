@@ -33,7 +33,7 @@ const Certifications: React.FC = () => {
         setCurrentIndex(index);
     };
     return (
-        <section ref={ref as React.RefObject<HTMLElement>} id="certification" className="py-20 px-6 md:px-12 bg-linear-to-b from-white via-blue-50/30 to-white dark:from-gray-50 dark:via-blue-100 dark:to-gray-50">
+        <section ref={ref as React.RefObject<HTMLElement>} id="certification" className="py-20 px-6 md:px-12 bg-gray-50">
                 {/* Styled horizontal line */}
                 <div className="flex items-center mb-20">
                     <div className="grow border-t-2 border-gray-300"></div>

@@ -50,7 +50,7 @@ export default function Contact() {
     ];
 
     return (
-        <section ref={ref as React.RefObject<HTMLElement>} id="contact" className="w-full relative">
+        <section ref={ref as React.RefObject<HTMLElement>} id="contact" className="w-full relative bg-gray-50">
             {/* Background image with overlay */}
             <div className="relative h-72 w-full">
                 <Img
