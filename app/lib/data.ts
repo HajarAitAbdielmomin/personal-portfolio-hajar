@@ -278,9 +278,9 @@ export const certificationsData: Certification[] = [
     {
         id: '13',
         organizationName: 'Hackerrank',
-        organizationLogo: '/logo/organizations/Hackerrank.png',
+        organizationLogo: '/logo/organizations/hackerrank.png',
         courseName: 'Java Fundamentals & Problem Solving Certification',
-        certificationImage: '/certificates/Hackerrank1.jpg',
+        certificationImage: '/certificates/hackerrank1.jpg',
     },
 ];
 
