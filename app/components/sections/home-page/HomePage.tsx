@@ -23,7 +23,7 @@ export default function HomePage() {
                                 Actively seeking a Full-Time opportunity (CDI)
                             </span>
                         </div>
-                        <h1 className="text-5xl lg:text-6xl font-bold">
+                        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold">
                             Hi,
                             <br />
                             I&#39;m <span className="text-blue-500 animate-pulse">Hajar</span>
@@ -66,7 +66,7 @@ export default function HomePage() {
                             <div className="absolute inset-0 bg-blue-500 rounded-[40%_60%_70%_30%/40%_50%_60%_50%] transform scale-110 animate-blob"></div>
 
                             {/* Profile Image */}
-                            <div className="relative w-80 h-80 rounded-full overflow-hidden hover:scale-105 transition-transform duration-300">
+                            <div className="relative w-56 h-56 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden hover:scale-105 transition-transform duration-300">
                                 <Img
                                     src="/images/photo.png"
                                     alt="AitHajar"
