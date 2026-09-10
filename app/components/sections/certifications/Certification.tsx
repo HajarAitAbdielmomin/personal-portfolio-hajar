@@ -57,11 +57,11 @@ const Certifications: React.FC = () => {
 
                 <div className={`reveal reveal-delay-2 ${inView ? 'visible' : ''}`}>
                 {/* Certifications Slider */}
-                <div className="relative">
+                <div className="relative px-8 md:px-12">
                     {/* Left Arrow */}
                     <button
                         onClick={handlePrev}
-                        className="absolute -left-16 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 cursor-pointer"
+                        className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 cursor-pointer"
                     >
                         <svg className="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" suppressHydrationWarning>
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -71,7 +71,7 @@ const Certifications: React.FC = () => {
                     {/* Right Arrow */}
                     <button
                         onClick={handleNext}
-                        className="absolute -right-16 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 cursor-pointer"
+                        className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 cursor-pointer"
                     >
                         <svg className="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" suppressHydrationWarning>
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
