@@ -13,12 +13,12 @@ export default function Contact() {
     const [formData, setFormData] = useState({
         name: '',
         company: '',
-        phone: '',
         email: '',
         subject: '',
         message: '',
     });
     const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
+    const [errorMsg, setErrorMsg] = useState('');
 
     const handleChange = (
         e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -35,9 +35,10 @@ export default function Contact() {
             if (data) {
                 await new Promise((resolve) => setTimeout(resolve, 1000));
                 setStatus('sent');
-                setFormData({ name: '', company: '', phone: '', email: '', subject: '', message: '' });
+                setFormData({ name: '', company: '', email: '', subject: '', message: '' });
             }
-        } catch {
+        } catch (err: any) {
+            setErrorMsg(err.message || 'Something went wrong. Please try again.');
             setStatus('error');
         }
     };
@@ -170,21 +171,7 @@ export default function Contact() {
                                 </div>
                             </div>
 
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <div>
-                                    <label htmlFor="phone" className="block text-xs font-medium text-gray-500 mb-1">
-                                        Phone
-                                    </label>
-                                    <input
-                                        type="tel"
-                                        id="phone"
-                                        name="phone"
-                                        value={formData.phone}
-                                        onChange={handleChange}
-                                        placeholder="Phone"
-                                        className="w-full px-3 py-2.5 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-                                    />
-                                </div>
+
                                 <div>
                                     <label htmlFor="email" className="block text-xs font-medium text-gray-500 mb-1">
                                         Email
@@ -194,13 +181,16 @@ export default function Contact() {
                                         id="email"
                                         name="email"
                                         value={formData.email}
-                                        onChange={handleChange}
+                                        onChange={(e) => { handleChange(e); if (status === 'error') setStatus('idle'); }}
                                         required
                                         placeholder="Email"
-                                        className="w-full px-3 py-2.5 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                                        className={`w-full px-3 py-2.5 rounded-lg border text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all ${status === 'error' && errorMsg.toLowerCase().includes('email') ? 'border-red-400' : 'border-gray-200'}`}
                                     />
+                                    {status === 'error' && errorMsg.toLowerCase().includes('email') && (
+                                        <p className="text-xs text-red-500 mt-1">{errorMsg}</p>
+                                    )}
                                 </div>
-                            </div>
+
 
                             <div>
                                 <label htmlFor="subject" className="block text-xs font-medium text-gray-500 mb-1">
@@ -249,7 +239,7 @@ export default function Contact() {
                             )}
                             {status === 'error' && (
                                 <p className="text-sm text-red-600 font-medium">
-                                    Something went wrong. Please try again.
+                                    {errorMsg || 'Something went wrong. Please try again.'}
                                 </p>
                             )}
                         </form>
