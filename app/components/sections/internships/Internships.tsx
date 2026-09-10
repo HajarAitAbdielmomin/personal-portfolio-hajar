@@ -4,6 +4,29 @@ import InternshipCard from '@/app/components/ui/InternshipCard/Card';
 import { internshipsData } from '@/app/lib/data';
 import { useInView } from '@/app/hooks/useInView';
 
+function AnimatedCard({ internship }: { internship: typeof internshipsData[0] }) {
+    const { ref, inView } = useInView(0.1);
+    return (
+        <div ref={ref as React.RefObject<HTMLDivElement>} className={`reveal from-left ${inView ? 'visible' : ''}`}>
+            <InternshipCard
+                position={internship.position}
+                company={internship.company}
+                location={internship.location}
+                companyLogo={internship.companyLogo}
+                startDate={internship.startDate}
+                endDate={internship.endDate}
+                tasks={internship.tasks}
+                technologies={internship.technologies}
+                uiImages={internship.uiImages}
+                status={internship.status}
+                topic={internship.topic}
+                width={internship.width}
+                height={internship.height}
+            />
+        </div>
+    );
+}
+
 const Internships: React.FC = () => {
     const { ref, inView } = useInView();
 
@@ -24,23 +47,7 @@ const Internships: React.FC = () => {
                     <div className="absolute left-2 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-400 via-purple-400 to-blue-400 rounded-full"></div>
                     <div className="pl-12">
                         {internshipsData.map((internship, index) => (
-                            <div key={index} className={`reveal from-left reveal-delay-${Math.min(index + 1, 5)} ${inView ? 'visible' : ''}`}>
-                                <InternshipCard
-                                    position={internship.position}
-                                    company={internship.company}
-                                    location={internship.location}
-                                    companyLogo={internship.companyLogo}
-                                    startDate={internship.startDate}
-                                    endDate={internship.endDate}
-                                    tasks={internship.tasks}
-                                    technologies={internship.technologies}
-                                    uiImages={internship.uiImages}
-                                    status={internship.status}
-                                    topic={internship.topic}
-                                    width={internship.width}
-                                    height={internship.height}
-                                />
-                            </div>
+                            <AnimatedCard key={index} internship={internship} />
                         ))}
                     </div>
                 </div>
