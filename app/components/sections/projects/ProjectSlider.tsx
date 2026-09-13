@@ -48,7 +48,7 @@ export default function ProjectsSlider({ projects }: { projects: Project[] }) {
                 <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
                     {/* Gallery */}
                     <div className="lg:col-span-3">
-                        <ProjectGallery project={activeProject} />
+                        <ProjectGallery key={current} project={activeProject} />
                     </div>
 
                     {/* Details */}
