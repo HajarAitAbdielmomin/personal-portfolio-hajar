@@ -17,7 +17,7 @@ export default function SimpleFooterOverview() {
                     {socials.map((Icon, i) => (
                         <div
                             key={i}
-                            className="w-9 h-9 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-500 hover:bg-yellow-400 hover:border-yellow-400 hover:text-white transition-colors cursor-pointer"
+                            className="w-9 h-9 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-500 hover:bg-blue-500 hover:border-blue-500 hover:text-white transition-colors cursor-pointer"
                             suppressHydrationWarning
                         >
                             <Icon size={16} suppressHydrationWarning />

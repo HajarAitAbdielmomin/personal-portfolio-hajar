@@ -8,6 +8,8 @@ import {
 } from 'react-icons/fa';
 import { useInView } from '@/app/hooks/useInView';
 import {sendEmail} from "@/app/services/email_service/email_service";
+
+
 export default function Contact() {
     const { ref, inView } = useInView();
     const [formData, setFormData] = useState({
