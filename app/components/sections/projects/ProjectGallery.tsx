@@ -74,7 +74,6 @@ export default function ProjectGallery({ project }: { project: Project }) {
                     )}
                 </div>
 
-                {/* Hide arrows while a video is playing so they don't fight with video controls */}
                 {!currentIsVideo && !isYouTube(currentItem) && currentGallery.length > 1 && (
                     <>
                         <button
@@ -95,7 +94,7 @@ export default function ProjectGallery({ project }: { project: Project }) {
                 )}
             </div>
 
-            {/* Dot indicators - lets you jump directly, including back out of a video */}
+
             {currentGallery.length > 1 && (
                 <div className="flex items-center justify-center gap-2">
                     {currentGallery.map((item, i) => (

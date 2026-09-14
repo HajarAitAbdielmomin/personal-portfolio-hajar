@@ -87,7 +87,7 @@ export default function ProjectsSlider({ projects }: { projects: Project[] }) {
                 </div>
             </div>
 
-            {/* Dots */}
+
             <div className="flex items-center justify-center gap-2 mt-6">
                 {projects.map((_, i) => (
                     <button
