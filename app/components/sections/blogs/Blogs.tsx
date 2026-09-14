@@ -98,6 +98,25 @@ const Blogs: React.FC = () => {
                                                 />
                                             ))
                                         }
+                                        {slideIndex === totalSlides - 1 && (
+                                            <a
+                                                href="https://medium.com/@hajar.aitabdielmomin"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="bg-white rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden h-auto sm:h-[26rem] w-full max-w-sm mx-auto flex flex-col items-center justify-center gap-4 group cursor-pointer"
+                                            >
+                                                <div className="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center group-hover:bg-blue-50 transition-colors duration-300">
+                                                    <svg className="w-8 h-8 text-gray-800" viewBox="0 0 24 24" fill="currentColor">
+                                                        <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/>
+                                                    </svg>
+                                                </div>
+                                                <div className="text-center px-6">
+                                                    <p className="text-lg font-semibold text-gray-900 mb-1">Read More on Medium</p>
+                                                    <p className="text-sm text-gray-400">Explore all my articles and writings</p>
+                                                </div>
+                                                <span className="text-blue-600 font-medium group-hover:underline">Visit Profile →</span>
+                                            </a>
+                                        )}
                                     </div>
                                 ))}
                             </div>
@@ -115,6 +134,7 @@ const Blogs: React.FC = () => {
                                 />
                             ))}
                         </div>
+
                     </div>
                 </div>
 
