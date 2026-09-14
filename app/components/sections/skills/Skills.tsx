@@ -3,14 +3,14 @@ import React from 'react';
 import SkillLogo from "@/app/components/ui/SkillCard/SkillLogo";
 import {skillGroups} from "@/app/lib/data";
 import { useInView } from "@/app/hooks/useInView";
-
+import {Divider} from "@/app/components/ui/SectionDivider/Divider";
 export default function Skills() {
     const { ref, inView } = useInView();
 
     return (
         <section ref={ref as React.RefObject<HTMLElement>} id="skills" className="w-full py-20 px-8 bg-white">
             <div className="max-w-7xl mx-auto">
-                <div className="flex items-center mb-20"><div className="flex-grow border-t-2 border-gray-300"></div><div className="mx-4"><div className="w-3 h-3 bg-blue-500 rounded-full"></div></div><div className="flex-grow border-t-2 border-gray-300"></div></div>
+                <Divider />
 
                 <div className={`text-center mb-16 reveal ${inView ? 'visible' : ''}`}>
                     <p className="text-sm text-gray-400 uppercase tracking-widest mb-2">My Skills</p>

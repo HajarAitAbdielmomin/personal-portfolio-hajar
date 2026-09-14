@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useInView } from '@/app/hooks/useInView';
 import {blogsData} from "@/app/lib/data";
 import BlogCard from "@/app/components/ui/BlogCard/Card";
+import {Divider} from "@/app/components/ui/SectionDivider/Divider";
 const Blogs: React.FC = () => {
     const { ref, inView } = useInView();
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -33,14 +34,7 @@ const Blogs: React.FC = () => {
     };
     return (
         <section ref={ref as React.RefObject<HTMLElement>} id="blog" className="py-20 px-6 md:px-12 bg-gray-50">
-            {/* Styled horizontal line */}
-            <div className="flex items-center mb-20">
-                <div className="grow border-t-2 border-gray-300"></div>
-                <div className="mx-4">
-                    <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-                </div>
-                <div className="grow border-t-2 border-gray-300"></div>
-            </div>
+            <Divider />
 
             <div className="max-w-6xl mx-auto">
                 {/* Section Header */}

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import CertificationCard from '@/app/components/ui/CertificationCard/Card';
 import { certificationsData } from '@/app/lib/data';
 import { useInView } from '@/app/hooks/useInView';
+import {Divider} from "@/app/components/ui/SectionDivider/Divider";
 
 const Certifications: React.FC = () => {
     const { ref, inView } = useInView();
@@ -34,14 +35,7 @@ const Certifications: React.FC = () => {
     };
     return (
         <section ref={ref as React.RefObject<HTMLElement>} id="certification" className="py-20 px-6 md:px-12 bg-gray-50">
-                {/* Styled horizontal line */}
-                <div className="flex items-center mb-20">
-                    <div className="grow border-t-2 border-gray-300"></div>
-                    <div className="mx-4">
-                        <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-                    </div>
-                    <div className="grow border-t-2 border-gray-300"></div>
-                </div>
+                <Divider />
 
                 <div className="max-w-6xl mx-auto">
                 {/* Section Header */}

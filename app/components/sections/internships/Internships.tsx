@@ -3,6 +3,7 @@ import React from 'react';
 import InternshipCard from '@/app/components/ui/InternshipCard/Card';
 import { internshipsData } from '@/app/lib/data';
 import { useInView } from '@/app/hooks/useInView';
+import {Divider} from "@/app/components/ui/SectionDivider/Divider";
 
 function AnimatedCard({ internship }: { internship: typeof internshipsData[0] }) {
     const { ref, inView } = useInView(0.1);
@@ -33,7 +34,7 @@ const Internships: React.FC = () => {
     return (
         <section ref={ref as React.RefObject<HTMLElement>} id="internship" className="py-20 px-6 md:px-12 bg-gray-50">
             <div className="max-w-7xl mx-auto">
-                <div className="flex items-center mb-20"><div className="flex-grow border-t-2 border-gray-300"></div><div className="mx-4"><div className="w-3 h-3 bg-blue-500 rounded-full"></div></div><div className="flex-grow border-t-2 border-gray-300"></div></div>
+                <Divider />
 
                 <div className={`text-center mb-16 reveal ${inView ? 'visible' : ''}`}>
                     <h2 className="text-sm text-gray-400 uppercase tracking-widest mb-2">My Internships</h2>
