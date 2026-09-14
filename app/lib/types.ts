@@ -1,13 +1,6 @@
 import {IconType} from "react-icons";
 
-export interface Project {
-    title: string;
-    description: string;
-    tags: string[];
-    screenshots: string[];
-    architecture: string[];
-    github: string;
-}
+
 
 export interface CertificationCardProps {
     id: string;
@@ -28,7 +21,12 @@ export interface EducationCardProps {
     isGraduated?: boolean;
     footerText?: string;
 }
-
+export interface SectionHeaderProps {
+    subtitle: string;
+    title: string;
+    titleSize?: 'text-3xl' | 'text-4xl';
+    inView: boolean;
+}
 export interface InternshipCardProps {
     position: string;
     company: string;
