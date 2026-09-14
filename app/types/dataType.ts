@@ -5,7 +5,13 @@ export interface Certification {
     courseName: string;
     certificationImage: string;
 }
-
+export interface Blog {
+    title: string;
+    date: string;
+    image: string;
+    subtitle: string;
+    link: string;
+}
 export interface Education {
     logo: string;
     schoolName: string;
