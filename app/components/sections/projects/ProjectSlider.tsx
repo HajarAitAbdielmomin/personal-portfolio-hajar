@@ -1,9 +1,9 @@
 "use client"
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import {FaGithub} from 'react-icons/fa';
-import { Project } from '@/app/lib/types';
 import React, {useState} from "react";
 import ProjectGallery from "@/app/components/sections/projects/ProjectGallery";
+import {Project} from "@/app/types/dataType";
 
 const DESCRIPTION_LIMIT = 150;
 
