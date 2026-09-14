@@ -8,6 +8,7 @@ const navLinks = [
     { id: 'internship', label: 'Internships' },
     { id: 'project', label: 'Projects' },
     { id: 'certification', label: 'Certifications' },
+    {id: 'blog', label: 'Blogs'},
     { id: 'skills', label: 'Skills' },
     { id: 'contact', label: 'Contact' },
 ];
