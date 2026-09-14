@@ -1,4 +1,4 @@
-import {Certification} from "@/app/types/dataType";
+import {Blog, Certification} from "@/app/types/dataType";
 import {Education} from "@/app/types/dataType";
 import {Internship} from "@/app/types/dataType";
 import {
@@ -439,5 +439,43 @@ export const internshipsData: Internship[] = [
         ],
         width: 40,
         height: 40,
+    },
+];
+
+export const blogsData: Blog[] = [
+    {
+        title: 'Method-Level Security: @PreAuthorize',
+        date: 'Jun 01, 2026',
+        image: '/blogs/blog1.png',
+        subtitle: 'Secure Your Business Logic with Spring Security.',
+        link: 'https://medium.com/javarevisited/method-level-security-preauthorize-83766141b1d4',
+    },
+    {
+        title: 'Spring Boot Exception Handling : @ControllerAdvice',
+        date: 'May 12, 2026',
+        image: '/blogs/blog2.png',
+        subtitle: 'Build Better API Error Responses.',
+        link: 'https://medium.com/javarevisited/spring-boot-exception-handling-controlleradvice-800451e49598',
+    },
+    {
+        title: 'Java Optional: Solving Null Problems the Right Way',
+        date: 'Jan 28, 2026',
+        image: '/blogs/blog3.png',
+        subtitle: 'A Practical Guide to Avoiding NullPointerException.',
+        link: 'https://medium.com/javarevisited/java-optional-solving-null-problems-the-right-way-efaea9480add',
+    },
+    {
+        title: 'Spring AI : Your First Step into AI-Powered Java Applications🍃🤖',
+        date: 'Oct 20, 2025',
+        image: '/blogs/blog4.png',
+        subtitle: 'Setting Up Your First Spring AI Project.',
+        link: 'https://medium.com/javarevisited/spring-ai-1aeb85db3d71',
+    },
+    {
+        title: 'Java Threads, Part 2: Concurrency Control and Thread Safety',
+        date: 'Jun 30, 2025',
+        image: '/blogs/blog5.png',
+        subtitle: 'Controlling Access to Shared Resources.',
+        link: 'https://medium.com/javarevisited/java-threads-part-2-concurrency-control-and-thread-safety-c46f7da9bae2',
     },
 ];
