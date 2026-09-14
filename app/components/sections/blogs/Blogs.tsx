@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import { useInView } from '@/app/hooks/useInView';
 import {blogsData} from "@/app/lib/data";
 import BlogCard from "@/app/components/ui/BlogCard/Card";
-import {formatDate} from '@/app/util/util';
 const Blogs: React.FC = () => {
     const { ref, inView } = useInView();
     const [currentIndex, setCurrentIndex] = useState(0);
