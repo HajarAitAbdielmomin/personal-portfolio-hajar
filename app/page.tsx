@@ -6,6 +6,7 @@ import Skills from "@/app/components/sections/skills/Skills";
 import Contact from "@/app/components/sections/contact/Contact"
 import Footer from "@/app/components/layout/footer/Footer";
 import Projects from "@/app/components/sections/projects/Projects";
+import Blogs from "@/app/components/sections/blogs/Blogs";
 export default function Page() {
     return (
         <main className="bg-gray-50">
@@ -14,6 +15,7 @@ export default function Page() {
             <Internships />
             <Projects />
             <Certifications />
+            <Blogs />
             <Skills />
             <Contact />
             <Footer />
