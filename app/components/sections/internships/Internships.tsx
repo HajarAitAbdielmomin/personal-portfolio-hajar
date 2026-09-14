@@ -3,6 +3,7 @@ import React from 'react';
 import InternshipCard from '@/app/components/ui/InternshipCard/Card';
 import { internshipsData } from '@/app/lib/data';
 import { useInView } from '@/app/hooks/useInView';
+import SectionHeader from '@/app/components/ui/SectionHeader/Header';
 import {Divider} from "@/app/components/ui/SectionDivider/Divider";
 
 function AnimatedCard({ internship }: { internship: typeof internshipsData[0] }) {
@@ -36,13 +37,11 @@ const Internships: React.FC = () => {
             <div className="max-w-7xl mx-auto">
                 <Divider />
 
-                <div className={`text-center mb-16 reveal ${inView ? 'visible' : ''}`}>
-                    <h2 className="text-sm text-gray-400 uppercase tracking-widest mb-2">My Internships</h2>
-                    <p className="text-3xl font-bold text-gray-900 dark:text-gray-700 mb-4">
-                        Experience working on real projects and developing professional skills
-                    </p>
-                    <span className="block w-16 h-1 bg-blue-500 mx-auto mt-2"></span>
-                </div>
+                <SectionHeader
+                    subtitle="My Internships"
+                    title="Experience working on real projects and developing professional skills"
+                    inView={inView}
+                />
 
                 <div className="relative">
                     <div className="absolute left-2 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-400 via-purple-400 to-blue-400 rounded-full"></div>

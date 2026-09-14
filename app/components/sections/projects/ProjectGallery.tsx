@@ -1,7 +1,7 @@
 "use client"
 import { Layers, Image as ImageIcon, ChevronLeft, ChevronRight } from 'lucide-react';
 import React, {useState} from "react";
-import type { Project } from '@/app/lib/types';
+import {Project} from "@/app/types/dataType";
 
 const VIDEO_EXTENSIONS = ['.mp4', '.webm', '.mov', '.ogg'];
 

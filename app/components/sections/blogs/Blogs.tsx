@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { useInView } from '@/app/hooks/useInView';
 import {blogsData} from "@/app/lib/data";
+import SectionHeader from '@/app/components/ui/SectionHeader/Header';
 import BlogCard from "@/app/components/ui/BlogCard/Card";
 import {Divider} from "@/app/components/ui/SectionDivider/Divider";
 const Blogs: React.FC = () => {
@@ -37,16 +38,11 @@ const Blogs: React.FC = () => {
             <Divider />
 
             <div className="max-w-6xl mx-auto">
-                {/* Section Header */}
-                <div className={`text-center mb-16 reveal ${inView ? 'visible' : ''}`}>
-                    <h2 className="text-sm text-gray-400 uppercase tracking-widest mb-2">
-                        My Blogs
-                    </h2>
-                    <p className="text-3xl font-bold text-gray-900 dark:text-gray-700 mb-4">
-                        Here are some of my writings
-                    </p>
-                    <span className="block w-16 h-1 bg-blue-500 mx-auto mt-2"></span>
-                </div>
+                <SectionHeader
+                    subtitle="My Blogs"
+                    title="Here are some of my writings"
+                    inView={inView}
+                />
 
                 <div className={`reveal reveal-delay-2 ${inView ? 'visible' : ''}`}>
                     {/* Certifications Slider */}

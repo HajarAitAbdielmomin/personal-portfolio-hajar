@@ -3,6 +3,7 @@ import React from 'react';
 import EducationCard from "@/app/components/ui/EducationCard/Card";
 import {educationsData} from "@/app/lib/data";
 import { useInView } from "@/app/hooks/useInView";
+import SectionHeader from '@/app/components/ui/SectionHeader/Header';
 import {Divider} from "@/app/components/ui/SectionDivider/Divider";
 
 export default function Education() {
@@ -13,13 +14,12 @@ export default function Education() {
             <div className="max-w-7xl mx-auto">
                 <Divider />
 
-                <div className={`text-center mb-16 reveal ${inView ? 'visible' : ''}`}>
-                    <p className="text-sm text-gray-400 uppercase tracking-widest mb-2">My journey</p>
-                    <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                        Academic Path
-                        <span className="block w-16 h-1 bg-blue-500 mx-auto mt-2"></span>
-                    </h2>
-                </div>
+                <SectionHeader
+                    subtitle="My journey"
+                    title="Academic Path"
+                    titleSize="text-4xl"
+                    inView={inView}
+                />
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {educationsData.map((edu, index) => (
